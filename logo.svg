@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Reaction Rumble logo: two smiling ions swapping partners">
+<defs>
+<radialGradient id="abg" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#f6fbff"/><stop offset="1" stop-color="#e9e6ff"/></radialGradient>
+<radialGradient id="apink" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffd6e1"/><stop offset="1" stop-color="#ff8fa8"/></radialGradient>
+<radialGradient id="ablue" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#dbe7ff"/><stop offset="1" stop-color="#7d9cf2"/></radialGradient>
+<radialGradient id="amint" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#d9fbee"/><stop offset="1" stop-color="#6fd6ae"/></radialGradient>
+<marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5a67d8"/></marker>
+</defs>
+<circle cx="60" cy="60" r="58" fill="url(#abg)"/>
+<path d="M30 34q30-22 60 0" fill="none" stroke="#5a67d8" stroke-width="3.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M90 96q-30 20-60 0" fill="none" stroke="#5a67d8" stroke-width="3.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M53 66l14-2" stroke="#5a67d8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="38" cy="66" r="20" fill="url(#apink)" stroke="#d65f80" stroke-width="2.4"/>
+<circle cx="83" cy="62" r="17" fill="url(#ablue)" stroke="#4e68c9" stroke-width="2.4"/>
+
+<ellipse cx="32" cy="64" rx="2.6" ry="3.4" fill="#2b2140"/><ellipse cx="44" cy="64" rx="2.6" ry="3.4" fill="#2b2140"/><circle cx="33" cy="62.8" r="1" fill="#fff"/><circle cx="45" cy="62.8" r="1" fill="#fff"/>
+<path d="M34 71q4 4 8 0" fill="none" stroke="#7a2c45" stroke-width="2" stroke-linecap="round"/><ellipse cx="27" cy="70" rx="3.4" ry="2.2" fill="#ff5f87" opacity=".45"/><ellipse cx="49" cy="70" rx="3.4" ry="2.2" fill="#ff5f87" opacity=".45"/>
+<path d="M78 59q2-2.5 4 0M86 59q2-2.5 4 0" fill="none" stroke="#2b2140" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M80 66q4 4.5 8 0" fill="#3a3a7a" stroke="#3a3a7a" stroke-width="1.4"/><ellipse cx="76" cy="66" rx="3" ry="2" fill="#ff5f87" opacity=".4"/><ellipse cx="91" cy="66" rx="3" ry="2" fill="#ff5f87" opacity=".4"/>
+<circle cx="52" cy="50" r="6" fill="#fff" stroke="#d65f80" stroke-width="1.8"/><path d="M49 50h6M52 47v6" stroke="#d65f80" stroke-width="2" stroke-linecap="round"/>
+<circle cx="96" cy="48" r="6" fill="#fff" stroke="#4e68c9" stroke-width="1.8"/><path d="M93 48h6" stroke="#4e68c9" stroke-width="2" stroke-linecap="round"/>
+
+<path d="M19 46l1.5 3.6 3.6 1.5-3.6 1.5L19 56.2l-1.5-3.6-3.6-1.5 3.6-1.5Z" fill="#a9b4ff"/><path d="M99 20l1.8 4.3 4.3 1.8-4.3 1.8L99 32.2l-1.8-4.3-4.3-1.8 4.3-1.8Z" fill="#ffc94d"/>
+</svg>
