@@ -869,7 +869,8 @@ function stateOf(f,d){
  return'aq';
 }
 function sides(d,states=false){let build=(list,offset)=>list.map((f,i)=>({f,n:d.coef[offset+i],st:states?stateOf(f,d):null}));return[build(d.r,0),build(d.p,d.r.length)]}
-function charge(f){const explicit=f.match(/^(.+)\^(\d*)([+-])$/);if(explicit)return{base:explicit[1],q:Number(explicit[2]||1)*(explicit[3]==='+'?1:-1)};if(/^NH4[+]$/.test(f))return{base:'NH4',q:1};if(/^(?:NO3|NO2|HCO3|ClO4|ClO3)[-]$/.test(f))return{base:f.slice(0,-1),q:-1};const m=f.match(/^(.+?)(\d+)?([+-])$/);return m?{base:m[1],q:Number(m[2]||1)*(m[3]==='+'?1:-1)}:null;}
+function charge(f){const SUP='⁰¹²³⁴⁵⁶⁷⁸⁹';f=String(f).replace(/[₀-₉]/g,c=>c.charCodeAt(0)-8320).replace(/[−–]/g,'-');if(!f.includes('^'))f=f.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]*[⁺⁻]$/,'^$&');f=f.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]/g,c=>c==='⁺'?'+':c==='⁻'?'-':SUP.indexOf(c));const explicit=f.match(/^(.+)\^(\d*)([+-])$/);if(explicit)return{base:explicit[1],q:Number(explicit[2]||1)*(explicit[3]==='+'?1:-1)};if(/^NH4[+]$/.test(f))return{base:'NH4',q:1};if(/^(?:NO3|NO2|HCO3|ClO4|ClO3)[-]$/.test(f))return{base:f.slice(0,-1),q:-1};/* no caret: a lone digit after one element is the charge (Fe3+, S2-); after a polyatomic group it is a subscript (MnO4-, C2H3O2-); with 2+ trailing digits only the last one is the charge (SO42-, Cr2O72-, Hg22+) */
+const m=f.match(/^(.*\D)(\d*)([+-])$/);if(!m)return null;let base=m[1],d=m[2];if(d.length>1||(d&&/^[A-Z][a-z]?$/.test(base))){base+=d.slice(0,-1);d=d.slice(-1)}else{base+=d;d=''}return{base,q:Number(d||1)*(m[3]==='+'?1:-1)};}
 
 function key(t){let c=charge(t.f);return (c?c.base+'#'+c.q:t.f)+'#'+(t.st||'')}
 function fmt(t){return(t.n===1?'':t.n)+t.f+(t.st?'('+t.st+')':'')}
