@@ -2,7 +2,7 @@
 
 Dr. Dan's chemical reactions study game for CHEM 3A and CHEM 1A at Fresno City College.
 
-Live: https://itsdrdan.github.io/reactions/  ·  Force a course in Canvas links with `?course=3A` or `?course=1A`.
+Live: https://itsdrdan.github.io/reactions/  ·  Force a course in Canvas links with `?course=3A` or `?course=1A`. Open the Mixing Bench directly with `?mode=bench` (combine: `?course=3A&mode=bench`); `node tools/check-deeplink.js` tests it with Playwright.
 
 **Current version:** v34 (adds the Mixing Bench)
 
